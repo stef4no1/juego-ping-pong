@@ -76,10 +76,10 @@ function createBall(){
         ballXDirection = -1; 
     }
     if(Math.round(Math.random()) == 1){
-        ballYDirection = Math.random() * 1; //more random directions
+        ballYDirection = Math.random() * 1; 
     }
     else{
-        ballYDirection = Math.random() * -1; //more random directions
+        ballYDirection = Math.random() * -1; 
     }
     ballX = gameWidth / 2;
     ballY = gameHeight / 2;
@@ -119,14 +119,14 @@ function checkCollision(){
     }
     if(ballX <= (paddle1.x + paddle1.width + ballRadius)){
         if(ballY > paddle1.y && ballY < paddle1.y + paddle1.height){
-            ballX = (paddle1.x + paddle1.width) + ballRadius; // if ball gets stuck
+            ballX = (paddle1.x + paddle1.width) + ballRadius; 
             ballXDirection *= -1;
             ballSpeed += 1;
         }
     }
     if(ballX >= (paddle2.x - ballRadius)){
         if(ballY > paddle2.y && ballY < paddle2.y + paddle2.height){
-            ballX = paddle2.x - ballRadius; // if ball gets stuck
+            ballX = paddle2.x - ballRadius; 
             ballXDirection *= -1;
             ballSpeed += 1;
         }
